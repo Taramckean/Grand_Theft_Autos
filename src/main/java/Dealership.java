@@ -5,7 +5,7 @@ public class Dealership {
     private String motto;
     private String name;
     private double till;
-    //    ArrayList<Car> vehicles;
+    ArrayList<Car> vehicles;
     Dealer dealer;
     Customer customer;
 
@@ -13,6 +13,7 @@ public class Dealership {
         this.motto = motto;
         this.name = name;
         this.till = 0;
+        this.vehicles = new ArrayList<Car>();
     }
 
     public String getMotto() {
@@ -25,6 +26,23 @@ public class Dealership {
 
     public double getTill() {
         return till;
+    }
+
+    public void setTill(double till) {
+        this.till = till;
+    }
+
+
+    public void addCar(Car car) {
+        this.vehicles.add(car);
+    }
+
+    public int countCars() {
+        return this.vehicles.size();
+    }
+
+    public ArrayList<Car> getVehicles() {
+        return vehicles;
     }
 }
 

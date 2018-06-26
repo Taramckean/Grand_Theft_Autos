@@ -8,8 +8,9 @@ public class Car {
     private int mileage;
     private int speed;
     private ArrayList<Component> components;
+    private int id;
 
-    public Car(String colour, int price, String brand, int year, int speed, int mileage){
+    public Car(String colour, int price, String brand, int year, int speed, int mileage,int id){
         this.colour = colour;
         this.price = price;
         this.brand = brand;
@@ -17,6 +18,7 @@ public class Car {
         this.mileage = mileage;
         this.speed = speed;
         this.components = new ArrayList<Component>();
+        this.id = id;
     }
 
 
@@ -38,6 +40,9 @@ public class Car {
         return this.year;
     }
 
+    public int getId() {
+        return id;
+    }
 
     public void addComponent(Component component) {
         components.add(component);

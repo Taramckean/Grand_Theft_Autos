@@ -11,7 +11,7 @@ public class CarTest {
 
     @Before
     public void before(){
-        car = new Car("Silver", 55000, "Mercedes", 2018, 0 , 0);
+        car = new Car("Silver", 55000, "Mercedes", 2018, 0 , 0, 2);
         engine = new Engine("Mercedes", "Large", "Cadillac V8", 400, 200);
         chassis = new Chassis("Mercedes W Chassis", "Small", "Sedan", 1000, "Silver");
         tyre1 = new Tyre("Michelin", "Medium", "Ford", 7 , "Black");
