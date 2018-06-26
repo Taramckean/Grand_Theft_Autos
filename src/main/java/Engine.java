@@ -10,4 +10,13 @@ public class Engine extends Component {
     public int getHorsepower() {
         return this.horsepower;
     }
+
+    public String turnOn() {
+        return "VROOOOOM!";
+    }
+
+
+    public String turnOff() {
+        return "Sizzle";
+    }
 }

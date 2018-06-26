@@ -31,7 +31,18 @@ public class EngineTest {
         assertEquals(400, engine.getWeight());
     }
 
-    @Test public void canTestHorsePower(){
+    @Test
+    public void canTestHorsePower(){
         assertEquals(200, engine.getHorsepower());
+    }
+
+    @Test
+    public void canTurnEngineOn(){
+        assertEquals("VROOOOOM!", engine.turnOn());
+    }
+
+    @Test
+    public void canTurnEngineOff(){
+        assertEquals("Sizzle", engine.turnOff());
     }
 }
