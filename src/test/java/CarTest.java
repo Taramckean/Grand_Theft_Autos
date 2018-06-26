@@ -11,7 +11,7 @@ public class CarTest {
 
     @Before
     public void before(){
-        car = new Car("Silver", 55000, "Mercedes", 2018, 0 );
+        car = new Car("Silver", 55000, "Mercedes", 2018, 0 , 0);
         engine = new Engine("Mercedes", "Large", "Cadillac V8", 400, 200);
         chassis = new Chassis("Mercedes W Chassis", "Small", "Sedan", 1000, "Silver");
         tyre1 = new Tyre("Michelin", "Medium", "Ford", 7 , "Black");
@@ -40,6 +40,11 @@ public class CarTest {
         assertEquals(2018, car.getYear());
     }
 
+    @Test
+    public void canTestSpeed(){
+        assertEquals(0, car.getSpeed());
+    }
+
    @Test
     public void canBuildCar(){
         car.addComponent(engine);
@@ -50,4 +55,23 @@ public class CarTest {
        car.addComponent(tyre4);
        assertEquals(6, car.countComponents());
    }
+
+   @Test
+    public void canTurnSpeedup() {
+       car.turnSpeedUp(30);
+       assertEquals(30, car.getSpeed());
+   }
+
+    @Test
+    public void canTurnSpeedDown() {
+        car.turnSpeedUp(30);
+        car.turnSpeedDown(10);
+        assertEquals(20, car.getSpeed());
+    }
+
+    @Test
+    public void canBreak(){
+        assertEquals("SCREECH", car.breakCar());
+    }
+
 }

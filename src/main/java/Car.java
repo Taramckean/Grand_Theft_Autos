@@ -6,14 +6,16 @@ public class Car {
     private String brand;
     private int year;
     private int mileage;
+    private int speed;
     private ArrayList<Component> components;
 
-    public Car(String colour, int price, String brand, int year, int mileage){
+    public Car(String colour, int price, String brand, int year, int speed, int mileage){
         this.colour = colour;
         this.price = price;
         this.brand = brand;
         this.year = year;
         this.mileage = mileage;
+        this.speed = speed;
         this.components = new ArrayList<Component>();
     }
 
@@ -43,5 +45,21 @@ public class Car {
 
     public int countComponents() {
         return components.size();
+    }
+
+    public int getSpeed() {
+        return this.speed;
+    }
+
+    public void turnSpeedUp(int speed) {
+        this.speed += speed;
+    }
+
+    public void turnSpeedDown(int speed) {
+        this.speed -= speed;
+    }
+
+    public String breakCar() {
+        return "SCREECH";
     }
 }
